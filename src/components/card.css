@@ -1,0 +1,30 @@
+/* Card.css */
+
+.card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card img {
+    max-width: 150%;
+    height: auto;
+  }
+  
+  .card h2 {
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    color: #555;
+  }
+  
+  
