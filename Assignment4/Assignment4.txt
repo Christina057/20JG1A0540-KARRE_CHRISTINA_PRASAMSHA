@@ -1,0 +1,52 @@
+Assignment: Creating a Database Using MongoDB and Mongosh
+
+1. Connect to MongoDB server:
+   mongosh
+   
+2. Drop the existing database named mydatabase:
+   use mydatabase
+   db.dropDatabase()
+   
+3. Create a new database named myDatabase:
+   use myDatabase
+   
+4. Create a collection named users within myDatabase:
+   db.createCollection("users")
+   
+5. Insert documents into the users collection:
+   db.users.insertMany([
+     {
+       "name": "John Doe",
+       "email": "john@example.com",
+       "age": 25
+     },
+     {
+       "name": "Jane Smith",
+       "email": "jane@example.com",
+       "age": 35
+     },
+     {
+       "name": "Alice Johnson",
+       "email": "alice@example.com",
+       "age": 40
+     }
+   ])
+   
+6. Retrieve all users from the users collection:
+   db.users.find()
+   
+7. Retrieve users with an age greater than or equal to 30:
+   db.users.find({ "age": { $gte: 30 } })
+   
+8. Update the age of a user with a specific email address:
+   db.users.updateOne(
+     { "email": "john@example.com" },
+     { $set: { "age": 28 } }
+   )
+   
+9. Delete a user document based on a specific email address:
+   db.users.deleteOne({ "email": "alice@example.com" })
+   
+10. Create an index on the email field of the users collection:
+    db.users.createIndex({ "email": 1 })
+
